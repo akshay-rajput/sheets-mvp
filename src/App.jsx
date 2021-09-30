@@ -3,7 +3,7 @@ import "./tailwind.css";
 import "./App.css";
 
 // redux
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { setupData } from "./features/Home/homeSlice";
 import websiteData from "./data.min.json";
 
@@ -19,22 +19,22 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-      // dispatch initial action
-      dispatch(setupData(websiteData));
+        // dispatch initial action
+        dispatch(setupData(websiteData));
     }, []);
 
     return (
         <div className="App">
             <TheNavbar />
-            
+
             <main className="container mx-auto px-4">
-              {/* render routes inside main container */}
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="about/*" element={<About />} />
-              </Routes>
+                {/* render routes inside main container */}
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="about/*" element={<About />} />
+                </Routes>
             </main>
-            
+
             <TheFooter />
         </div>
     );

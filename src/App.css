@@ -1,40 +1,43 @@
-:root{
-  --darkestbg: #222;
-  --darkbg: #333;
-  --white: #fff;
-  --offwhite: hsl(210, 100%, 92%);
-  --primary: dodgerblue;
-  --accent: orange;
-  --gray: #666;
-  --lightgray: #ccc;
+:root {
+    --darkestbg: #222;
+    --darkbg: #333;
+    --white: #fff;
+    --offwhite: hsl(210, 100%, 92%);
+    --primary: dodgerblue;
+    --accent: orange;
+    --gray: #666;
+    --lightgray: #ccc;
 }
 
-.App{
-  background-color: #222;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #222;
-  color: #fcfcfc;
-  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', Roboto, Oxygen, Ubuntu, sans-serif;
+.App {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #222;
+    color: #fcfcfc;
+    font-family: -apple-system, BlinkMacSystemFont, "Open Sans",
+        "Helvetica Neue", Roboto, Oxygen, Ubuntu, sans-serif;
 }
-main{
-  flex-grow: 1;
+main {
+    flex-grow: 1;
 }
-a:hover{
-  color: teal;
-  text-decoration: underline;
+a:hover {
+    color: teal;
+    text-decoration: underline;
 }
 
-.btn-app{
-  background-color: var(--lightgray);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  color: var(--darkbg);
+.btn-app {
+    background-color: var(--lightgray);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    color: var(--darkbg);
 }
-input[type="search"], input, select{
-  padding: 0.5rem;
-  background-color: var(--darkestbg);
-  border: 1px solid var(--gray);
-  border-radius: 5px;
+input[type="search"],
+input,
+select {
+    padding: 0.5rem;
+    background-color: var(--darkestbg);
+    border: 1px solid var(--gray);
+    border-radius: 5px;
 }
