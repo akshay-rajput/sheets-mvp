@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 import { removeRule } from "../Table/tableSlice";
 import { useDispatch } from "react-redux";
 
+const BORDER_COLORS = {
+    yellow: "border-yellow-400",
+    gray: "border-gray-400",
+    green: "border-green-400",
+    blue: "border-blue-400",
+    red: "border-red-400",
+}
+
 export default function RuleCard({ singleRule }) {
     const dispatch = useDispatch();
     const [conditionOfRule, setConditionOfRule] = useState("");
@@ -36,7 +44,7 @@ export default function RuleCard({ singleRule }) {
         <div
             className={
                 "flex justify-between rounded border border-l-8 mb-2" +
-                ` border-${singleRule.color}-400`
+                ` ${BORDER_COLORS[singleRule.color]}`
             }
         >
             <p className={`p-2`}>
