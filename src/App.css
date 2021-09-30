@@ -1,22 +1,40 @@
+:root{
+  --darkestbg: #222;
+  --darkbg: #333;
+  --white: #fff;
+  --offwhite: hsl(210, 100%, 92%);
+  --primary: dodgerblue;
+  --accent: orange;
+  --gray: #666;
+  --lightgray: #ccc;
+}
+
 .App{
   background-color: #222;
-}
-
-.template-intro{
-  height: 100vh;
-  background-color: #222;
-  color: #ccc;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Roboto, Oxygen, Ubuntu, sans-serif;
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
-  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+  color: #fcfcfc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', Roboto, Oxygen, Ubuntu, sans-serif;
 }
-
-.template-intro a{
-  color: rgb(31, 185, 185);
+main{
+  flex-grow: 1;
 }
-.template-intro a:hover{
+a:hover{
   color: teal;
   text-decoration: underline;
+}
+
+.btn-app{
+  background-color: var(--lightgray);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  color: var(--darkbg);
+}
+input[type="search"], input, select{
+  padding: 0.5rem;
+  background-color: var(--darkestbg);
+  border: 1px solid var(--gray);
+  border-radius: 5px;
 }
