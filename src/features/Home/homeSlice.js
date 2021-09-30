@@ -1,27 +1,29 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  count: 0
+  data: {},
+  rules: []
 }
 
 export const homeSlice = createSlice({
-  name: 'counter',
+  name: 'sheetData',
   initialState,
   reducers: {
-    setupCounter: (state, action) => {
-        state.count = action.payload;
+    setupData: (state, action) => {
+        state.data = action.payload;
     },
-    incrementCounter: (state, action) => {
-        state.count += 1;
+
+    addRule: (state, action) => {
+        state.rules.push(action.payload);
     },
-    decrementCounter: (state, action) => {
-        state.count -= 1;
+    removeRule: (state, action) => {
+      // console.log("payload: ", action.payload);
+      state.rules = state.rules.filter(rule => rule.id !== action.payload.id);
     },
-    
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setupCounter, incrementCounter, decrementCounter } = homeSlice.actions;
+export const { setupData, addRule, removeRule } = homeSlice.actions;
 
 export default homeSlice.reducer;
