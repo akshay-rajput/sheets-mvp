@@ -17,12 +17,13 @@ export default function FormatRules() {
     const { rules } = useSelector((state) => state.sheetData);
     const dispatch = useDispatch();
 
-    const [ruleInfo, setRuleInfo] = useState({
+    const initialRule = {
         condition: "",
         fieldName: "",
         value: "",
-        color: "yellow", // default is gray
-    });
+        color: "yellow",
+    }
+    const [ruleInfo, setRuleInfo] = useState(initialRule);
 
     function createRule(event) {
         event.preventDefault();
@@ -30,6 +31,10 @@ export default function FormatRules() {
         const rule_id = uuidv4();
         let updatedRule = { ...ruleInfo };
         updatedRule.id = rule_id;
+
+        if(!updatedRule.color){
+            updatedRule.color = "yellow";
+        }
 
         dispatch(addRule(updatedRule));
 
