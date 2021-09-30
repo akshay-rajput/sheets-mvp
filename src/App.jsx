@@ -4,7 +4,7 @@ import "./App.css";
 
 // redux
 import { useDispatch } from "react-redux";
-import { setupData } from "./features/Home/homeSlice";
+import { setupData } from "./features/Table/tableSlice";
 import websiteData from "./data.min.json";
 
 // components

@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
-import FormatRules from "../features/Home/FormatRules";
-import DataTable from "../features/Home/DataTable";
+import FormatRules from "../features/FormatCells/FormatRules";
+import DataTable from "../features/Table/DataTable";
 
 export default function Home() {
     const { data } = useSelector((state) => state.sheetData);
