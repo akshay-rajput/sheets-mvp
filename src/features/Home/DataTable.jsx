@@ -35,7 +35,7 @@ export default function DataTable({ data, columns }) {
                                         {...column.getHeaderProps(
                                             column.getSortByToggleProps()
                                         )}
-                                        className="p-2 border font-semibold text-gray-400"
+                                        className="py-2 px-4 border text-left border-gray-600 font-semibold text-gray-400"
                                     >
                                         {
                                             // Render the header
@@ -44,8 +44,8 @@ export default function DataTable({ data, columns }) {
                                         <span>
                                             {column.isSorted
                                                 ? column.isSortedDesc
-                                                    ? " 🔽"
-                                                    : " 🔼"
+                                                    ? <span className="text-gray-600"> ▼</span>
+                                                    : <span className="text-gray-600"> ▲</span>
                                                 : ""}
                                         </span>
                                     </th>
@@ -69,7 +69,7 @@ export default function DataTable({ data, columns }) {
                                     return (
                                         <td
                                             className={
-                                                "p-2 border" +
+                                                "py-2 px-4 border border-gray-600" +
                                                 ` bg-${checkIfRuleApplicable(
                                                     rules,
                                                     cell.value,
