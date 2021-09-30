@@ -5,11 +5,11 @@ import { addRule } from "../Table/tableSlice";
 import UserRules from "./UserRules";
 
 const FILTER_COLORS = [
-    { name: "yellow" },
-    { name: "gray" },
-    { name: "green" },
-    { name: "blue" },
-    { name: "red" },
+    { name: "yellow", bgClass: "bg-yellow-700", borderClass: "border-yellow-300" },
+    { name: "gray", bgClass: "bg-gray-700", borderClass: "border-gray-300" },
+    { name: "green", bgClass: "bg-green-700", borderClass: "border-green-300" },
+    { name: "blue", bgClass: "bg-blue-700", borderClass: "border-blue-300" },
+    { name: "red", bgClass: "bg-red-700", borderClass: "border-red-300" },
 ];
 
 export default function FormatRules() {
@@ -185,7 +185,7 @@ export default function FormatRules() {
                                                 }
                                                 className={
                                                     "block border h-6 w-6 rounded-full" +
-                                                    ` bg-${colorChoice.name}-400 border-${colorChoice.name}-300 border-2`
+                                                    ` ${colorChoice.bgClass} ${colorChoice.borderClass} border-2`
                                                 }
                                             ></button>
                                         </li>
