@@ -19,4 +19,4 @@ This project uses [Vite.js](https://vitejs.dev/) as a build tool.
 
 ![sheets-mvp](app-screenshot.png)
 
-You can check the [demo here](https://reaction-template.netlify.app/).
+You can check the [demo here](https://sheets-mvp.netlify.app/).
