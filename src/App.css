@@ -1,0 +1,22 @@
+.App{
+  background-color: #222;
+}
+
+.template-intro{
+  height: 100vh;
+  background-color: #222;
+  color: #ccc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Roboto, Oxygen, Ubuntu, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  align-items: center;
+}
+
+.template-intro a{
+  color: rgb(31, 185, 185);
+}
+.template-intro a:hover{
+  color: teal;
+  text-decoration: underline;
+}
