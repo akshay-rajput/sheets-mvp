@@ -45,7 +45,7 @@ export default function RuleCard({ singleRule }) {
             </p>
             <button
                 onClick={removeTheRule}
-                className="font-bold text-md border-l p-2 text-red-300"
+                className="font-bold text-md border-l p-2 text-red-300 hover:bg-red-600 hover:text-white"
                 title="remove rule"
             >
                 x
